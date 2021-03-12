@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        hr {
+            margin: 0;
+        }
+        .accContainer {
+            display: none;
+            position: fixed;
+        }
+        /* .accContainer>div:last-child {
+            border: none;
+        } */
+        .panel {
+            border-radius: 0 0 5px 5px;
+            display: none;
+            padding: 20px 8px;
+            background-color: rgb(69, 99, 74);
+            color: white;
+            border: 0.3px solid darkgreen;
+        }
+        .accordion:hover {
+            background-color: rgb(27, 228, 43);
+        }
+        .accordion {
+            border-radius: 5px;
+            background-color: rgb(30, 189, 43);
+            /* opacity: 0.3; */
+            color: white;
+            display: block;
+            /* cursor: pointer; */
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: left;
+            padding: 8px;
+            margin-top: 3px;
+            border: 0.3px solid darkgreen;
+        }
+        .active {
+            background-color: rgb(27, 228, 43);
+            border-radius: 5px 5px 0px 0px;
+        }
+        .jumpBtn {display: none;}
+        .jumpBtn,#startBtn {
+            position: absolute;
+            width: 100px;
+            /* height: 30px; */
+            background-color:  rgb(30, 189, 43);
+            color:white;
+            border: 0.3px solid darkgreen;
+            border-radius: 5px 5px 5px 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Arial;
+            text-align: center;
+            padding: 8px;
+        }
+        .jumpBtn:hover,#startBtn:hover {
+            background-color: rgb(27, 228, 43);
+        }
+        .exitContainer {
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 70px;
+            /* top: 210px; */
+            /* left: 750px; */
+            /* left:200px; */
+            background-color:  rgba(0, 128, 0,1);
+        }
+        #exitA {
+            display: block;
+            position: relative;
+            width:46px;
+            height:50px;
+            top:10px;
+            left:30px;
+            background-color:  rgb(255, 255, 255);
+        }
+        #exitB {
+            position: relative;
+            color: white;
+            font-size: 2.5rem;
+            font-weight:bold;
+            font-family: Arial;
+            top:-40px;
+            left:100px;
+        }
+    </style>
+    <script src="./_js/jquery-3.4.1.js"></script>
+    <script src="moveingUI.js"></script>
+</head>
+
+<body>
+    <button id="startBtn">START</button>
+    <div class='ceil'>
+        <hr>
+    </div>
+    <div class='accContainer obstacle'>
+        <div class='accordion active'>Button A</div>
+        <div class="panel">
+            Press above button to active next button.
+        </div>
+        <div class='accordion'>Button B</div>
+        <div class="panel">
+            Keep pressing next button.
+        </div>
+        <div class='accordion'>Button C</div>
+        <div class="panel">
+            Keep pressing next button.
+        </div>
+        <div class='accordion'>Button D</div>
+        <!-- <div class="panel">
+            this is d.
+        </div> -->
+    </div>
+    <!-- <div class='jumpBtn obstacle'>JUMP</div> -->
+    <div class='exitContainer'>
+        <div id='exitA'></div>
+        <div id='exitB'>EXIT</div>
+    </div>
+</body>
+
+</html>
