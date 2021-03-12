@@ -357,7 +357,7 @@ var gamePlayer = {
         this.paddleImg.style.opacity = "0.3";
         this.paddleImg.width = paddleRadius*1.7;
         this.paddleImg.height = paddleRadius*1.7;
-        this.paddleImg.src = "/img/paddle.png";
+        this.paddleImg.src = "./img/paddle.png";
         this.paddle.appendChild(this.paddleImg);
         this.playerDiv.appendChild(this.paddle);
         this.paddleAction.style.position = 'absolute';
